@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    main {
+      display: flex;
+      align-items: center;
+      width: 1200px;
+      height: 800px;
+      margin: 50px auto;
+    }
+    .left {
+      width: 50px;
+      height: 100%;
+      background-color: pink;
+    }
+    .content {
+      width: 1150px;
+      height: 100%;
+      background-color: aliceblue;
+      position: relative;
+    }
+    .msg-bar {
+      box-sizing: border-box;
+      padding: 50px;
+    }
+    .msg-item {
+      height: 20px;
+      color: #fff;
+      background-color: blueviolet;
+      line-height: 20px;
+      padding-left: 30px;
+      box-sizing: border-box;
+      padding-right: 30px;
+      list-style-type:none;
+      display: inline-block;
+    }
+    .send-bar {
+      position: absolute;
+      left: 50px;
+      bottom: 0;
+    }
+  </style>
+</head>
+<body>
+
+
+<main>
+  <div class="left">
+    <div class="user">
+
+    </div>
+  </div>
+  <div class="content">
+    <ul class="msg-bar">
+      <li class="msg-item">消息列表</li>
+    </ul>
+    <div class="send-bar">
+      <input type="text" id="input">
+      <button id="send">发送</button>
+    </div>
+  </div>
+</main>
+
+
+
+
+
+
+
+
+
+<script src="/public/socket.io.dev.js"></script>
+<script src="/public/jquery.js"></script>
+<script>
+
+  $('#send').click(function () {
+    $.ajax('http://localhost:7001/40.10038,116.36867', function (e) {
+      console.log(e)
+    })
+    // $.ajax('/a/b', function (e) {
+    //   console.log(e)
+    // })
+  })
+/**
+  let socket = io('/', {
+    query: {
+      room: `demo1${Math.random()}`,
+      userId: `client_${Math.random()}`,
+    }
+  })
+
+  socket.on('connect', () => {
+    const id = socket.id;
+    $('.user').text(id)
+    console.log('#connect,链接成功');
+    // socket.on(id, msg => {
+    //   console.log('#p2p消息,', msg);
+    // });
+    socket.on('online', msg => {
+      console.log('online, 广播', msg);
+    });
+  });
+
+  $("#send").click(function (e) {
+    console.log('发送消息', e);
+    socket.emit('sendMsg', {msg: $('#input').val()});
+  })
+
+  socket.on('broadcast', msg => {
+    console.log('broadcast, 广播', msg);
+  });
+  socket.on('online', msg => {
+    console.log('online, 广播', msg);
+  });
+**/
+</script>
+
+</body>
+</html>

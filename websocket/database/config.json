@@ -1,0 +1,9 @@
+{
+"development": {
+    "username": "root",
+    "password": "xanggang",
+    "database": "chatroom",
+    "host": "localhost",
+    "dialect": "mysql"
+  }
+}
