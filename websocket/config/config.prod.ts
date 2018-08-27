@@ -7,7 +7,7 @@ export default () => {
     hostname: 'localhost',
     port: 3306,
     database: 'chatroom-pro',
-    password: 'xang_gang1057516363'
+    password: 'password'
   };
   return config;
 };
