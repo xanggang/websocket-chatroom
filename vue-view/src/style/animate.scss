@@ -1,0 +1,38 @@
+@import "Animate.css";
+@keyframes animatIn {
+  0% {
+    transform: translate(-100%, 0);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes animatOut {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(100%, 0);
+  }
+}
+.fade-enter {
+  transform: translate(-100%, 0);
+  position: absolute!important;
+  z-index: 999;
+  top: 0;
+  left: 0;
+}
+.fade-enter-active {
+  animation: animatIn 0.2s;
+  position: absolute!important;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.fade-leave {
+  transform: translate(0, 0);
+}
+.fade-leave-active {
+  animation: animatOut 0.2s;
+}

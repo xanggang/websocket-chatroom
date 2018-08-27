@@ -1,0 +1,62 @@
+@import "./var";
+
+@mixin ellipsis {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+@mixin user-select($xyz) {
+  -webkit-user-select: $xyz;
+  user-select: $xyz;
+}
+
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin hover($color) {
+  transition: all 0.2s;
+  &:hover {
+    background-color: $color;
+  }
+}
+
+@mixin border-dpr($border-width){
+  border-width: $border-width;
+  [data-dpr="2"] & {
+    border-width: $border-width / 2;
+  }
+  [data-dpr="3"] & {
+    border-width: $border-width / 3;
+  }
+}
+
+@mixin arrow-right ($width, $height, $col) {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    right: 0.08rem;
+    top: 50%;
+    margin-top: -$height/2 + rem;
+    width: $width + rem;
+    height: $height + rem;
+    border-top: 1px solid $col;
+    border-right: 1px solid $col;
+    transform: rotate(45deg);
+    @include border-dpr(1px)
+  }
+}
+
+@mixin test {
+  box-shadow: inset 0px -1px 1px -1px #c8c7cc;
+}

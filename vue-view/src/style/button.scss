@@ -1,0 +1,12 @@
+@import "./mixin";
+@import "./var";
+._button {
+  &[class~=login] {
+    width: 4.9rem;
+    height: 0.8rem;
+    background: #e63d00;
+    color: #e8e8e8;
+    @include ellipsis;
+    cursor: pointer;
+  }
+}
