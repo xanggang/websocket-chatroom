@@ -14,16 +14,16 @@
                 class="input" required />
       </div>
       <div class="user-name">
-        <van-icon name="contact" />
-        <van-field v-model="passwordOne" placeholder="请输入昵称" class="input" required/>
+        <van-icon name="password-not-view" />
+        <van-field v-model="passwordOne" placeholder="请输入密码" class="input" required/>
       </div>
       <div class="user-name">
-        <van-icon name="contact" />
-        <van-field v-model="passwordTwo" placeholder="请输入密码" class="input" required/>
+        <van-icon name="password-not-view" />
+        <van-field v-model="passwordTwo" placeholder="再次输入密码" class="input" required/>
       </div>
       <div class="user-name">
-        <van-icon name="contact" />
-        <van-field v-model="nick" placeholder="再次输入密码" class="input" required/>
+        <van-icon name="like-o" />
+        <van-field v-model="nick" placeholder="请输入昵称" class="input" required/>
       </div>
       <van-button class="_button login" type="default" @click="register">注册</van-button>
     </div>

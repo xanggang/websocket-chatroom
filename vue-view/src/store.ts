@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import Home from './stores/Home'
-import {Toast} from "vant";
 Vue.use(Vuex)
 
 export default new Vuex.Store({
