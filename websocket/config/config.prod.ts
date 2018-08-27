@@ -6,8 +6,8 @@ export default () => {
     dialect: 'mysql',
     hostname: 'localhost',
     port: 3306,
-    database: 'chatroom',
-    password: 'xanggang'
+    database: 'chatroom-pro',
+    password: 'xang_gang1057516363'
   };
   return config;
 };
